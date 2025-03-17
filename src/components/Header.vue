@@ -1,3 +1,4 @@
+<script setup></script>
 <template>
   <div>
     <div>
@@ -36,5 +37,8 @@
 }
 .FindButton {
   height: 4vh;
+}
+.FindButton:hover {
+  cursor: pointer;
 }
 </style>
