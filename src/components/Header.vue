@@ -1,12 +1,14 @@
-<script setup></script>
+<script setup>
+const emit = defineEmits(['open-modal'])
+</script>
 <template>
   <div>
     <div>
       <div class="Header">
         <img src="/logo.svg" />
         <input class="FindInput" placeholder="Поиск по имени" />
-        <img class="FindButton" src="/ButtonAdd.svg" />
-        <h1 class="right">Посетители</h1>
+        <img class="FindButton" src="/ButtonAdd.svg" @click="() => emit('open-modal')" />
+        <h1 class="right">Пользователи</h1>
       </div>
     </div>
   </div>

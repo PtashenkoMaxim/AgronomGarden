@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+const props = defineProps({
   AddVisiter: Function,
   Name: String,
   Company: String,
@@ -10,14 +10,20 @@ defineProps({
 <template>
   <div class="VisitorTable">
     <div class="VisitorBody">
-      <h1>{{ Name }}</h1>
-      <h1>{{ Group }}</h1>
-      <h1>{{ Company }}</h1>
-      <h1>{{ Presence }}</h1>
+      <tr class="TableBody">
+        <th>{{ Name }}</th>
+        <th>{{ Group }}</th>
+        <th>{{ Company }}</th>
+        <th>{{ Presence }}</th>
+      </tr>
     </div>
   </div>
 </template>
 <style>
+.TableBody {
+  display: flex;
+  gap: 100px;
+}
 .VisitorBody {
   display: flex;
   align-items: center;
